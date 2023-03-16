@@ -1,41 +1,42 @@
-export function getRecipes(){
-let recipes =localStorage.getItem("recipes");
-if(recipes === null){
-    return [];
-}
-return JSON.parse(recipes);
-}
-
-function saveRecipes(recipes){
-    let recipesJSON = JSON.stringify(recipes);
-    localStorage.setItem("recipes",recipesJSON);
-}
+import {getRecipes as favGetRecipes,addRecipes as favAddRecipes,deleteRecipe as favDeleteRecipes,clearMenu as clearFavorite} from "./modules.js"; //renonbrar el archivo con el as
 
 
-export function addRecipes(recipe){
-    let recipes = getRecipes(); 
-    if(inList(recipe,recipes) !== -1){// para no meterla dos veces
-        return;
+function listFavorite(){
+    let listFav = document.getElementById("listafavoritos")
+    let recipes = favGetRecipes();
+    let ul =document.createElement("ul");
+    recipes.forEach(recipe => {
+        let img = document.createElement("img");
+            img.src = recipe.image;
+
+          let recipeItem = document.createElement("li");
+          recipeItem.innerText = recipe.name;
+
+          recipeItem.appendChild(img);
+          ul.appendChild(recipeItem);
+        });
+    listFav.appendChild(ul);
+}
+
+
+listFavorite();
+
+
+
+function clearFavoriteList(event){
+    let element = event.target;
+    let parent = element.parentElement;
+    let text = parent.getElementsByTagName("ul")[0];
+    if (confirm("¿deseas borrar este elemento? \n" + text)) {
+      parent.remove();
     }
-    recipes.push(recipe);
-    saveRecipes(recipes);
-}
+  }
 
-function inList(recipe,recipes){
-    let index = recipes.findIndex(element => element.name === recipe.name) // findindex ya existe een js no esta creado
-            return index;
-        }
 
-export function deleteRecipe(recipe){
-    let recipes = getRecipes(); // conseguimos las recetas
-    let index = inList(recipe,recipes); // busca el indice de la receta
-        if(index === -1){
-             return;
-        }
-    recipes.splice(index,1); // saca el indice y borra 1, donde empieza y con los q continua
-    saveRecipes(recipes); // y vuelve a salvarlo
-}
 
-export function clearMenu(){
-    localStorage.clear();
-}
+
+
+
+  
+
+ 

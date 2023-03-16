@@ -54,8 +54,8 @@ async function setResults(){
     recipes.forEach(recipe => {
       let recipeArticle = document.createElement("article");
       recipeArticle.style.display ="none";
-      // let iconoFavorite = crearIcono("fa-bookmark");
-     let iconoFavorite = crearIcono("fa-bookmark-o");
+      /* // let iconoFavorite = crearIcono("fa-bookmark");
+     let iconoFavorite = crearIcono("fa-bookmark-o"); */
       let image = document.createElement("img");
       image.onload =function (){
         recipeArticle.style.display = "block";
@@ -88,7 +88,7 @@ async function setResults(){
 
     
       recipeUrl.appendChild(image);
-      recipeArticle.appendChild(iconoFavorite);
+     //  recipeArticle.appendChild(iconoFavorite);
       recipeArticle.appendChild(name);
       recipeArticle.appendChild(recipeUrl);
       recipeArticle.appendChild(yield);
@@ -102,13 +102,13 @@ async function setResults(){
 
 }
 
-function crearIcono(simbolo,callback){
+/* function crearIcono(simbolo,callback){
   let icono = document.createElement("i");
   icono.classList.add("fa", simbolo);
   icono.addEventListener("click", callback);
   return icono;
 }
-
+ */
 
 
 

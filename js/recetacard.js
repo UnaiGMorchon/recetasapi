@@ -1,14 +1,14 @@
-import {getRecipes as favGetRecipes,addRecipes as favAddRecipes,deleteRecipe as favDeleteRecipes} from "./favoritos.js"; //renonbrar el archivo con el as
+import {getRecipes as favGetRecipes,addRecipes as favAddRecipes,deleteRecipe as favDeleteRecipes} from "./modules.js"; //renonbrar el archivo con el as
 
 
-/* function favGetRecipes() {
-  let favRecipes = localStorage.getItem("favRecipes");
-  return JSON.parse(favRecipes);
+
+
+function crearIcono(simbolo,callback){
+  let icono = document.createElement("i");
+  icono.classList.add("fa", simbolo);
+  icono.addEventListener("click", callback);
+  return icono;
 }
- */
-
-
-
 
 
 async function getRecipe(url){
@@ -51,6 +51,8 @@ async function showRecipeOne(){
 
   async function setResults(recipe){
         let recipename = document.createElement("h3");
+        // let iconoFavorite = crearIcono("fa-bookmark");
+      let iconoFavorite = crearIcono("fa-bookmark-o");
         let recipeimage = document.createElement("img");
         let recipeyield = document.createElement("p");
         let recipeingredients = document.createElement("ul");
@@ -60,7 +62,7 @@ async function showRecipeOne(){
   
         recipename.innerText = recipe.name;
         recipeimage.src = recipe.image;
-        recipeimage.addEventListener("click",() => favAddRecipes(recipe));
+        iconoFavorite.addEventListener("click",() => favAddRecipes(recipe));
         recipeyield.innerText = "Yield: " + recipe.yield;
   
         recipe.ingredients.forEach(ingredient => {
@@ -74,6 +76,7 @@ async function showRecipeOne(){
         recipecuisineType.innerText = "Cuisine Type: " + recipe.cuisineType;
   
         recipeArticle.appendChild(recipename);
+        recipeArticle.appendChild(iconoFavorite);
         recipeArticle.appendChild(recipeimage);
         recipeArticle.appendChild(recipeyield);
         recipeArticle.appendChild(recipeingredients);
@@ -83,7 +86,5 @@ async function showRecipeOne(){
       };
   
       showRecipeOne();
-
-
-
+      
 
