@@ -7,8 +7,8 @@ function createUrl() {
  /*  url.searchParams.append("dishType", "Biscuits and cookies");
   url.searchParams.append("dishType", "Desserts");
   url.searchParams.append("dishType", "Sweets"); */
-  url.searchParams.append("field", "label");
   url.searchParams.append("field", "image");
+  url.searchParams.append("field", "label");
   url.searchParams.append("field", "yield");
   url.searchParams.append("field", "ingredients");
   url.searchParams.append("field", "calories");
@@ -28,8 +28,8 @@ async function getRecipes() {
     .then(data => {
       return data.hits.map(hit => {
         return {
-          name: hit.recipe.label,
           image: hit.recipe.image,
+          name: hit.recipe.label,
           yield: hit.recipe.yield,
           ingredients: hit.recipe.ingredients,
           calories: hit.recipe.calories,
@@ -54,11 +54,13 @@ async function setResults(){
     recipes.forEach(recipe => {
       let recipeArticle = document.createElement("article");
       recipeArticle.style.display ="none";
-      let name = document.createElement("h3");
+      // let iconoFavorite = crearIcono("fa-bookmark");
+     let iconoFavorite = crearIcono("fa-bookmark-o");
       let image = document.createElement("img");
       image.onload =function (){
         recipeArticle.style.display = "block";
       }
+      let name = document.createElement("h3");
       let yield = document.createElement("p");
       let ingredients = document.createElement("ul");
       let calories = document.createElement("p");
@@ -84,8 +86,10 @@ async function setResults(){
       totalTime.innerText = "Total Time: " + recipe.totalTime;
       cuisineType.innerText = "Cuisine Type: " + recipe.cuisineType;
 
-      recipeArticle.appendChild(name);
+    
       recipeUrl.appendChild(image);
+      recipeArticle.appendChild(iconoFavorite);
+      recipeArticle.appendChild(name);
       recipeArticle.appendChild(recipeUrl);
       recipeArticle.appendChild(yield);
       recipeArticle.appendChild(ingredients);
@@ -98,6 +102,54 @@ async function setResults(){
 
 }
 
-document.getElementById("Buscar").addEventListener("change", setResults); // elemento qu e hace la llamada
+function crearIcono(simbolo,callback){
+  let icono = document.createElement("i");
+  icono.classList.add("fa", simbolo);
+  icono.addEventListener("click", callback);
+  return icono;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* function addToFavorites(event) {
+  document.querySelector(".fa-bookmark-o").addEventListener("click", function(event) {
+  sessionStorage.setItem("fa-bookmark-o", iconoFavorite); 
+});
+
+}
+ */
+/* 
+function addToFavorites() {
+  let recipeId = this.dataset.recipeId; // Obtener el ID de la receta desde el atributo "data-recipe-id" del icono
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || []; // Obtener la lista de favoritos del almacenamiento local o crear una nueva lista si no existe
+  if (!favorites.includes(recipeId)) { // Si la receta aún no está en la lista de favoritos, agregarla
+    favorites.push(recipeId);
+    localStorage.setItem("favorites", JSON.stringify(favorites)); // Guardar la lista de favoritos actualizada en el almacenamiento local
+  }
+}
+let iconoFavorite = crearIcono("fa-bookmark-o", addToFavorites); // Crear el icono con la clase "fa-bookmark-o" y agregar el listener al hacer clic
+iconoFavorite.dataset.recipeId = recipe.id; // Guardar el ID de la receta en el atributo "data-recipe-id" del icono
+// Este código utiliza el método localStorage para guardar la lista de favoritos en el navegador del usuario. Al hacer clic en el icono, se obtiene el ID de la receta desde un atributo personalizado data-recipe-id del icono y se agrega a la lista de favoritos en el almacenamiento local si aún no está allí.
+
+ */
+
+
+document.getElementById("Buscar").addEventListener("change", setResults); // elemento que hace la llamada
 
 
