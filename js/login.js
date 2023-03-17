@@ -10,5 +10,3 @@ document.querySelector("form").addEventListener("submit", function(event) {
     sessionStorage.setItem("username", nombre);
     sessionStorage.setItem("email", mail);
   });
-
-

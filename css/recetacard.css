@@ -4,70 +4,114 @@
     src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
 
-
 * {
     font-family: montserrat;
     margin: 0px;
 }
 
-
-img{
-    margin: 20px;
-  
-}
-
-
-#iconos{
-    display: inline-block;
-    scale: 5%;
-}
-h3{
-    position: absolute;
-    font-size: 20px;
-    margin-top: 267px;
-    margin-left: 42px;
+ 
+ul{
+    position: fixed;
+    margin: 30px;
     z-index: 1;
-    max-width: 20%;
+}
+p{
+    position: fixed;
+    margin-top: 30;
+    z-index: 1;
 }
 
-
-.ul{
-position: relative;
-}
-
-p{position: relative;
-    margin-top: 20px;
-    margin-left: 20px;
-
-
-}
-/* #resultados{
+.recipeList{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 19px;
-    margin-left: 40px;
+}
 
-} */
+#textoseleccion{
+    position: relative;
+   margin-top: -79px;
+    margin-left: -75px;
+    margin-bottom: 30px;
+}
 
+
+.iconocalories{
+    margin-bottom: -90px;
+    margin-left: -181px;
+    scale: 8%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+.iconotime{
+    margin-bottom: -90px;
+    margin-left: -73px;
+    scale: 8%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+.iconochef{
+    margin-bottom: -90px;
+    margin-left: 45px;
+    scale: 8%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+   
+
+#rectangulo{
+    position: fixed;
+    margin-top: 294px;
+    z-index: 1;
+    background-color: #ffb700;
+    width: 375px;
+    height: 364px;
+    border-radius: 66px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+img{
+    scale: 129%;
+    margin: 20px;
+}
+
+h3{
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 25px;
+    font-size: 14px;
+    margin-top: 330px;
+    margin-left: 89px;
+    z-index: 2;
+    max-width: 20%;
+  }
 
 
 @media only screen and (max-width: 767px) {
     h3{
         position: absolute;
+        padding-left: 15px;
+        padding-right: 10px;
         font-size: 14px;
         margin-top: 267px;
-        margin-left: 42px;
-        z-index: 1;
+        margin-left: 22px;
+        z-index: 2;
         max-width: 70%;
       }
 }
  
- 
-
 #barramenu{
-    background-color: rgb(94, 94, 94, 0.5);
+    background-color: rgba(255, 183, 0, 0.5);
     margin: 0px;
     height: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
 
 }
 #menu{
@@ -77,11 +121,6 @@ p{position: relative;
     justify-content: left;
 }
 
-
-#login,#signup{
-    color: aqua;
-    font-size: 15px;
-}
 
 
 
@@ -99,6 +138,12 @@ p{position: relative;
     }
 }
 
+article{
+    z-index: 1;
+}
+
+
+
 
 #recipiescard{
     margin-top: 17px;
@@ -110,5 +155,3 @@ p{position: relative;
     margin-top: 125px;
     margin-left: 103px;
 }
-
-

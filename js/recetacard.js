@@ -79,10 +79,10 @@ async function showRecipeOne(){
         recipeArticle.appendChild(iconoFavorite);
         recipeArticle.appendChild(recipeimage);
         //recipeArticle.appendChild(recipeyield);
-        recipeArticle.appendChild(recipeingredients);
         recipeArticle.appendChild(recipecalories);
         recipeArticle.appendChild(recipetotalTime);
         recipeArticle.appendChild(recipecuisineType);
+        recipeArticle.appendChild(recipeingredients);
       };
   
       showRecipeOne();

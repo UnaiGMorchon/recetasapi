@@ -66,7 +66,7 @@ footer{
     scale: 5%;
     position: fixed;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
 }
 
 .iconopersona{
@@ -78,7 +78,7 @@ footer{
 #circulo{
     position: fixed;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     margin-top: 341px;
     margin-left: 140px;
     background-color: #ffb700;
@@ -142,10 +142,6 @@ h3{
 }
 
 
-#login,#signup{
-    color: aqua;
-    font-size: 15px;
-}
 
 
 #seccionlogin{
