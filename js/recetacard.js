@@ -52,7 +52,7 @@ async function showRecipeOne(){
   async function setResults(recipe){
         let recipename = document.createElement("h3");
         // let iconoFavorite = crearIcono("fa-bookmark");
-      let iconoFavorite = crearIcono("fa-bookmark-o");
+        let iconoFavorite = crearIcono("fa-bookmark-o");
         let recipeimage = document.createElement("img");
         let recipeyield = document.createElement("p");
         let recipeingredients = document.createElement("ul");
@@ -63,7 +63,7 @@ async function showRecipeOne(){
         recipename.innerText = recipe.name;
         recipeimage.src = recipe.image;
         iconoFavorite.addEventListener("click",() => favAddRecipes(recipe));
-        recipeyield.innerText = "Yield: " + recipe.yield;
+        //recipeyield.innerText = "Yield: " + recipe.yield;
   
         recipe.ingredients.forEach(ingredient => {
               let li = document.createElement("li");
@@ -78,7 +78,7 @@ async function showRecipeOne(){
         recipeArticle.appendChild(recipename);
         recipeArticle.appendChild(iconoFavorite);
         recipeArticle.appendChild(recipeimage);
-        recipeArticle.appendChild(recipeyield);
+        //recipeArticle.appendChild(recipeyield);
         recipeArticle.appendChild(recipeingredients);
         recipeArticle.appendChild(recipecalories);
         recipeArticle.appendChild(recipetotalTime);

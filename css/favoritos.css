@@ -13,35 +13,34 @@
 
  body{
     background-size: 100%;
-    background-image:  url('../img/pexels-anna-tukhfatullina-food-photographerstylist-2693447.jpg');
+    background-image: url('../img/pexels-anna-tukhfatullina-food-photographerstylist-2693447.jpg');
 }
-
-
-
 
 @media only screen and (max-width: 767px) {
     body {
         background-size: 150%;
     background-position: 0px 0px, center;
-       
     background-image: url('../img/pexels-anna-tukhfatullina-food-photographerstylist-2693447.jpg');
     }
 }
 
+#espacioblanco{
+    height: 150px;
 
-
-.recipeList{
-    display: flex;
-    flex-wrap: wrap;
 }
 
-#textoseleccion{
-    position: relative;
-   margin-top: -79px;
-    margin-left: -75px;
-    margin-bottom: 30px;
+
+ul{
+    list-style: none;
+    text-align: center;
+
 }
- 
+
+li{
+
+    margin: 32px;
+}
+
 
 footer{
     position: fixed;
@@ -52,7 +51,7 @@ footer{
 }
 
 .iconofavorito{
-    margin-bottom: -236px;
+    margin-bottom: -231px;
     margin-left: -191px;
     scale: 5%;
     position: fixed;
@@ -62,7 +61,7 @@ footer{
 
 .iconosumar{
     margin-bottom: -215px;
-    margin-left: -81px;
+    margin-left: -75px;
     scale: 5%;
     position: fixed;
     bottom: 0;
@@ -72,7 +71,7 @@ footer{
 .iconopersona{
     margin-left: 45px;
     scale: 5%;
-    margin-top: -237px;
+    margin-top: -232px;
 }
 
 #circulo{
@@ -88,50 +87,47 @@ footer{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#recipeList{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-}
+
+
+
 
 img{
-    margin: 20px;
-    border: 4px solid #ffb700;
+    margin-top: 34px;
+    margin-left: -17px;
+    margin-bottom: 34px;
+    margin-right: 16px;
+  
 }
 
 h3{
     position: absolute;
-    padding-left: 15px;
-    padding-right: 25px;
     font-size: 14px;
     margin-top: 267px;
-    margin-left: 22px;
+    margin-left: 42px;
     z-index: 1;
     max-width: 20%;
-    background-color: rgba(255, 183, 0, 0.5);
   }
 
 
 @media only screen and (max-width: 767px) {
     h3{
         position: absolute;
-        padding-left: 15px;
-        padding-right: 10px;
         font-size: 14px;
         margin-top: 267px;
-        margin-left: 22px;
+        margin-left: 42px;
         z-index: 1;
         max-width: 70%;
       }
 }
  
+ 
+
 #barramenu{
     background-color: rgba(255, 183, 0, 0.5);
     margin: 0px;
     height: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1;
-
 
 }
 #menu{
@@ -146,6 +142,7 @@ h3{
     color: aqua;
     font-size: 15px;
 }
+
 
 
 #seccionlogin{
@@ -173,3 +170,5 @@ h3{
     margin-top: 125px;
     margin-left: 103px;
 }
+
+

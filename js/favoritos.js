@@ -1,4 +1,4 @@
-import {getRecipes as favGetRecipes,addRecipes as favAddRecipes,deleteRecipe as favDeleteRecipes,clearMenu as clearFavorite} from "./modules.js"; //renonbrar el archivo con el as
+import {getRecipes as favGetRecipes,addRecipes as favAddRecipes,deleteRecipe as favDeleteRecipes,clearMenu as clearFavorite, deleteRecipe} from "./modules.js"; //renonbrar el archivo con el as
 
 
 function listFavorite(){
@@ -6,6 +6,13 @@ function listFavorite(){
     let recipes = favGetRecipes();
     let ul =document.createElement("ul");
     recipes.forEach(recipe => {
+        let buttonEliminar = document.createElement("button");
+        buttonEliminar.innerText = "borrar";
+        buttonEliminar.addEventListener("click", () => {
+            favDeleteRecipes(recipe);
+            recipeItem.remove();
+        })
+
         let img = document.createElement("img");
             img.src = recipe.image;
 
@@ -13,30 +20,23 @@ function listFavorite(){
           recipeItem.innerText = recipe.name;
 
           recipeItem.appendChild(img);
+          recipeItem.appendChild(buttonEliminar);
           ul.appendChild(recipeItem);
         });
     listFav.appendChild(ul);
 }
 
-
 listFavorite();
 
 
 
-function clearFavoriteList(event){
-    let element = event.target;
-    let parent = element.parentElement;
-    let text = parent.getElementsByTagName("ul")[0];
-    if (confirm("¿deseas borrar este elemento? \n" + text)) {
-      parent.remove();
-    }
-  }
 
 
 
 
 
 
-  
+
+
 
  

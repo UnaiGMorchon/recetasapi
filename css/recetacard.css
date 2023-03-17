@@ -1,3 +1,114 @@
-#fondomovil{
-    background-color: rgb(101, 101, 164);
+
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
+
+
+* {
+    font-family: montserrat;
+    margin: 0px;
+}
+
+
+img{
+    margin: 20px;
+  
+}
+
+
+#iconos{
+    display: inline-block;
+    scale: 5%;
+}
+h3{
+    position: absolute;
+    font-size: 20px;
+    margin-top: 267px;
+    margin-left: 42px;
+    z-index: 1;
+    max-width: 20%;
+}
+
+
+.ul{
+position: relative;
+}
+
+p{position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+
+
+}
+/* #resultados{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 19px;
+    margin-left: 40px;
+
+} */
+
+
+
+@media only screen and (max-width: 767px) {
+    h3{
+        position: absolute;
+        font-size: 14px;
+        margin-top: 267px;
+        margin-left: 42px;
+        z-index: 1;
+        max-width: 70%;
+      }
+}
+ 
+ 
+
+#barramenu{
+    background-color: rgb(94, 94, 94, 0.5);
+    margin: 0px;
+    height: 60px;
+
+}
+#menu{
+    margin-left: 20px;
+    margin-bottom: -40px;
+    display: flex;
+    justify-content: left;
+}
+
+
+#login,#signup{
+    color: aqua;
+    font-size: 15px;
+}
+
+
+
+#seccionlogin{
+    position: absolute;
+   margin-top: 19px;
+   margin-left: 1170px;
+}
+
+@media only screen and (max-width: 767px) {
+    #seccionlogin {
+        position: absolute;
+        margin-top: 19px;
+        margin-left: 325px;
+    }
+}
+
+
+#recipiescard{
+    margin-top: 17px;
+     margin-left: 0px;
+}
+
+
+#selectorreceta{
+    margin-top: 125px;
+    margin-left: 103px;
+}
+
+

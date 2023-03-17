@@ -30,12 +30,12 @@ async function getRecipes() {
         return {
           image: hit.recipe.image,
           name: hit.recipe.label,
-          yield: hit.recipe.yield,
-          ingredients: hit.recipe.ingredients,
-          calories: hit.recipe.calories,
-          totalTime: hit.recipe.totalTime,
+         // yield: hit.recipe.yield,
+          //ingredients: hit.recipe.ingredients,
+          //calories: hit.recipe.calories,
+         // totalTime: hit.recipe.totalTime,
           id: hit.recipe.uri.split("_")[1],
-          cuisineType: hit.recipe.cuisineType
+          //cuisineType: hit.recipe.cuisineType
           
         }
       });
@@ -61,41 +61,41 @@ async function setResults(){
         recipeArticle.style.display = "block";
       }
       let name = document.createElement("h3");
-      let yield = document.createElement("p");
-      let ingredients = document.createElement("ul");
-      let calories = document.createElement("p");
-      let totalTime = document.createElement("p");
-      let cuisineType = document.createElement("p");
+      //let yield = document.createElement("p");
+      //let ingredients = document.createElement("ul");
+      //let calories = document.createElement("p");
+      //let totalTime = document.createElement("p");
+      //let cuisineType = document.createElement("p");
       let recipeUrl = document.createElement("a");
 
       name.innerText = recipe.name;
       image.src = recipe.image;
-      yield.innerText = "Yield: " + recipe.yield;
+      //yield.innerText = "Yield: " + recipe.yield;
 
-          recipe.ingredients.forEach(ingredient => {
+         /*  recipe.ingredients.forEach(ingredient => {
             let li = document.createElement("li");
             li.innerText = ingredient.text;
             ingredients.appendChild(li);
-          });
+          }); */
 
         
       recipeUrl.href = "recetacard.html?id=" + recipe.id;
 
       /* ingredients.innerText = "Ingredients: " + recipe.ingredients; */
-      calories.innerText = "Calories: " + recipe.calories;
-      totalTime.innerText = "Total Time: " + recipe.totalTime;
-      cuisineType.innerText = "Cuisine Type: " + recipe.cuisineType;
+      //calories.innerText = "Calories: " + recipe.calories;
+      //totalTime.innerText = "Total Time: " + recipe.totalTime;
+      //cuisineType.innerText = "Cuisine Type: " + recipe.cuisineType;
 
     
       recipeUrl.appendChild(image);
      //  recipeArticle.appendChild(iconoFavorite);
       recipeArticle.appendChild(name);
       recipeArticle.appendChild(recipeUrl);
-      recipeArticle.appendChild(yield);
-      recipeArticle.appendChild(ingredients);
-      recipeArticle.appendChild(calories);
-      recipeArticle.appendChild(totalTime);
-      recipeArticle.appendChild(cuisineType);
+      //recipeArticle.appendChild(yield);
+     // recipeArticle.appendChild(ingredients);
+      //recipeArticle.appendChild(calories);
+      //recipeArticle.appendChild(totalTime);
+      //recipeArticle.appendChild(cuisineType);
       recipeList.appendChild(recipeArticle);
       
     });

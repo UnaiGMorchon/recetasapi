@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmasarArte</title>
+    <title>¡Que delicia!</title>
 
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+<nav id="barramenu" >
+    <section id="menu">
+        <h1 id="recipiescard">¡Que delicia!</h1>
+    </section>
+    <section id="seccionlogin">
+        <!-- <button id="signup" >Sing up</button>
+        <button id="login" >Login</button> -->
+        <i class="fa fa-user-circle-o"></i>
+    </section>
+</nav>
+
+
 </head>
 <body>
-    
-    <section >
-        <h1 id="recipiescard"> recetas</h1>
-       <section id="recipies">  </section>
-    </section>
 
-    
-    <section>
+    <section id="selectorreceta" >
+        <h2 id="textoseleccion">Selecciona una categoria de postres</h2>
             <select name="" id="Buscar">
                 <option value="Desserts">Desserts</option>
                 <option value="Biscuits and cookies">Biscuits and cookies</option>
@@ -26,13 +35,21 @@
    </section>
 
     <section id="resultados">
-        <article id="recipeList"> resultados de la busqueda</article>
-          
+        <article id="recipeList"></article>
+    </section>
+    <section id="circulo" >
     </section>
 
 
-<script src="js/index.js"></script>
+    <footer>
+        <section id="iconosmenuabajo" >
+            <a href="favoritos.html"><img class="iconofavorito" src="img/003-favorito.png" alt="icono favorito"></a>
+            <a href="crearreceta.html"> <img class="iconosumar" src="img/002-suma-signo-ms.png" alt="icono agregar">
+            <a href="login.html"> <img class="iconopersona" src="img/001-persona.png" alt="icono persona">
+        </section>
+    </footer>
 
+<script src="js/index.js"></script>
 
 </body>
 </html>
