@@ -29,7 +29,15 @@
 }
 
 
-
+#load{
+    scale: 40%;
+    position: relative;
+    margin-left: -229px;
+    margin-top: -141px;
+    text-align: center;
+    z-index: 3;
+    border: none;
+}
 
 .recipeList{
     display: flex;
@@ -45,10 +53,9 @@
  
 
 .icononotificacion{
-    margin-bottom: 372px;
-    margin-left: -240px;
+    margin-top: -228px;
+    margin-left: 81px;
     scale: 6%;
-    position: fixed;
     bottom: 0;
     z-index: 3;
 }

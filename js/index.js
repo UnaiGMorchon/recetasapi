@@ -102,52 +102,14 @@ async function setResults(){
 
 }
 
-/* function crearIcono(simbolo,callback){
-  let icono = document.createElement("i");
-  icono.classList.add("fa", simbolo);
-  icono.addEventListener("click", callback);
-  return icono;
-}
- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* function addToFavorites(event) {
-  document.querySelector(".fa-bookmark-o").addEventListener("click", function(event) {
-  sessionStorage.setItem("fa-bookmark-o", iconoFavorite); 
+document.getElementById("Buscar").addEventListener("input", function() {
+  var animation = document.getElementById('load');
+  setTimeout(function() {
+    animation.style.display = 'none';
+  }, 3000);
+  
 });
-
-}
- */
-/* 
-function addToFavorites() {
-  let recipeId = this.dataset.recipeId; // Obtener el ID de la receta desde el atributo "data-recipe-id" del icono
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || []; // Obtener la lista de favoritos del almacenamiento local o crear una nueva lista si no existe
-  if (!favorites.includes(recipeId)) { // Si la receta aún no está en la lista de favoritos, agregarla
-    favorites.push(recipeId);
-    localStorage.setItem("favorites", JSON.stringify(favorites)); // Guardar la lista de favoritos actualizada en el almacenamiento local
-  }
-}
-let iconoFavorite = crearIcono("fa-bookmark-o", addToFavorites); // Crear el icono con la clase "fa-bookmark-o" y agregar el listener al hacer clic
-iconoFavorite.dataset.recipeId = recipe.id; // Guardar el ID de la receta en el atributo "data-recipe-id" del icono
-// Este código utiliza el método localStorage para guardar la lista de favoritos en el navegador del usuario. Al hacer clic en el icono, se obtiene el ID de la receta desde un atributo personalizado data-recipe-id del icono y se agrega a la lista de favoritos en el almacenamiento local si aún no está allí.
-
- */
 
 
 document.getElementById("Buscar").addEventListener("change", setResults); // elemento que hace la llamada

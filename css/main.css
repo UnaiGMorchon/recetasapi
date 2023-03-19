@@ -1,6 +1,25 @@
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+
+* {
+    font-family: montserrat;
+    margin: 0px;
+}
+
+p{
+    text-align: center;
+    margin-top: -420px;
+    position: relative;
+ 
+}
+
 img{
-    margin-left: -185px;
-    margin-top: -300px;
+    position: relative;
+    margin-left: -187px;
+    margin-top: -334px;
     text-align: center;
     scale: 50%;
 }
