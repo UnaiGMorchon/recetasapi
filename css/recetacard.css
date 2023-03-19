@@ -9,17 +9,48 @@
     margin: 0px;
 }
 
+#textoingredientes{
+    font-weight: bolder;
+    position: absolute;
+    margin-top: 357px;
+    margin-left: -37px;
+
+
+}
+
+
+
+.fa-bookmark{
+    color: #ffb700;
+    position: relative;
+    padding: 35px;
+    scale: 3;
+    z-index: 1;
+    padding-left: 182px;
+    padding-bottom: 35px;
+    padding-top: 0px;
+    }
  
+p{
+    position: relative;
+    display: inline-block;
+    margin-top: 89px;
+    margin-left: 58px;
+    z-index: 1;
+    font-size: 12px;
+}
+
+
 ul{
     position: fixed;
-    margin: 30px;
+    padding-top: 128px;
+    margin-top: 30px;
+    margin-left: 7px;
+    margin-right: 7px;
     z-index: 1;
 }
-p{
-    position: fixed;
-    margin-top: 30;
-    z-index: 1;
-}
+
+
 
 .recipeList{
     display: flex;
@@ -34,9 +65,20 @@ p{
 }
 
 
-.iconocalories{
+#iconoizq{
     margin-bottom: -90px;
     margin-left: -181px;
+    scale: 8%;
+    position: fixed;
+    z-index: 2;
+}
+
+
+
+
+.iconocalories{
+    margin-bottom: -40px;
+    margin-left: -169px;
     scale: 8%;
     position: fixed;
     bottom: 0;
@@ -44,7 +86,7 @@ p{
 }
 
 .iconotime{
-    margin-bottom: -90px;
+    margin-bottom: -40px;
     margin-left: -73px;
     scale: 8%;
     position: fixed;
@@ -53,8 +95,8 @@ p{
 }
 
 .iconochef{
-    margin-bottom: -90px;
-    margin-left: 45px;
+    margin-bottom: -40px;
+    margin-left: 33px;
     scale: 8%;
     position: fixed;
     bottom: 0;
@@ -66,7 +108,7 @@ p{
     position: fixed;
     margin-top: 294px;
     z-index: 1;
-    background-color: #ffb700;
+    background-color: #ffffff;
     width: 375px;
     height: 364px;
     border-radius: 66px;
@@ -76,16 +118,18 @@ p{
 
 
 img{
-    scale: 129%;
+    scale: 140%;
     margin: 20px;
+    margin-left: 35px;
+    margin-top: -53px;
 }
 
 h3{
     position: absolute;
-    padding-left: 15px;
-    padding-right: 25px;
+    padding-left: 34px;
+    padding-right: 10px;
     font-size: 14px;
-    margin-top: 330px;
+    margin-top: 315px;
     margin-left: 89px;
     z-index: 2;
     max-width: 20%;
@@ -95,10 +139,10 @@ h3{
 @media only screen and (max-width: 767px) {
     h3{
         position: absolute;
-        padding-left: 15px;
+        padding-left: 34px;
         padding-right: 10px;
         font-size: 14px;
-        margin-top: 267px;
+        margin-top: 315px;
         margin-left: 22px;
         z-index: 2;
         max-width: 70%;
@@ -106,10 +150,8 @@ h3{
 }
  
 #barramenu{
-    background-color: rgba(255, 183, 0, 0.5);
     margin: 0px;
     height: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1;
 
 
@@ -149,7 +191,11 @@ article{
     margin-top: 17px;
      margin-left: 0px;
 }
+a {
+    text-decoration: none;
+    color: inherit;
 
+  }
 
 #selectorreceta{
     margin-top: 125px;

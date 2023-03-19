@@ -12,17 +12,18 @@
 
 
  body{
-    background-size: 100%;
-    background-image: url('../img/pexels-anna-tukhfatullina-food-photographerstylist-2693447.jpg');
+    
+    background-image: url('../img/fondodeserts.png');
 }
-
 @media only screen and (max-width: 767px) {
     body {
-        background-size: 150%;
+    background-size: 50%;
     background-position: 0px 0px, center;
-    background-image: url('../img/pexels-anna-tukhfatullina-food-photographerstylist-2693447.jpg');
+    background-image: url('../img/fondodeserts.png');
     }
 }
+
+
 
 #espacioblanco{
     height: 150px;
@@ -33,12 +34,23 @@
 ul{
     list-style: none;
     font-weight: bolder;
-    margin-right: 0px;
+    font-size: 12px;
+    margin-right: 54px;
 }
 
 
 li{
-    margin: 32px;
+ padding-top: 10px;
+ padding-bottom: 46px;
+ padding-left: 164px;
+
+}
+.icononotificacion{
+    margin-top: -228px;
+    margin-left: 81px;
+    scale: 6%;
+    bottom: 0;
+    z-index: 3;
 }
 
 
@@ -46,59 +58,74 @@ footer{
     position: fixed;
     bottom: 0;
     z-index: 1;
-    background-color: #ffb700;
+    background-color: #ffffff;
     height: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
 }
 
 .iconofavorito{
-    margin-bottom: -231px;
-    margin-left: -191px;
-    scale: 5%;
+    margin-bottom: -237px;
+    margin-left: -152px;
+    scale: 4%;
     position: fixed;
     bottom: 0;
     z-index: 1;
 }
 
+.iconohome{
+    margin-bottom: -234px;
+    margin-left: -225px;
+    scale: 6.5%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    border: none;
+}
 .iconosumar{
-    margin-bottom: -215px;
-    margin-left: -80px;
+    margin-bottom: -223px;
+    margin-left: -72px;
     scale: 5%;
     position: fixed;
     bottom: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 .iconopersona{
-    margin-left: 45px;
-    scale: 5%;
-    margin-top: -232px;
+    margin-left: 6px;
+    scale: 4%;
+    margin-top: -234px;
 }
+
+.iconorueda{
+    margin-left: 84px;
+    scale: 4%;
+    margin-top: -391px;
+    position: fixed;
+   
+    z-index: 3;
+}
+
 
 #circulo{
     position: fixed;
     bottom: 0;
-    z-index: 1;
-    margin-top: 341px;
-    margin-left: 140px;
+    z-index: 2;
+    margin-bottom: 12px;
+    margin-left: 163px;
     background-color: #ffb700;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
-article{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 
 img{
-    scale: 50%;
-    margin-top: 34px;
-    margin-left: -38px;
-    margin-bottom: 34px;
+    scale: 34%;
+    margin-top: -181px;
+    margin-left: -250px;
+    margin-bottom: -133px;
     margin-right: 16px;
     border: 4px solid #ffb700;
   
@@ -128,10 +155,8 @@ h3{
  
 
 #barramenu{
-    background-color: rgba(255, 183, 0, 0.5);
     margin: 0px;
     height: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1;
 
 }
@@ -142,11 +167,7 @@ h3{
     justify-content: left;
 }
 
-#seccionlogin{
-    position: absolute;
-   margin-top: 19px;
-   margin-left: 1170px;
-}
+
 
 @media only screen and (max-width: 767px) {
     #seccionlogin {
@@ -160,6 +181,7 @@ h3{
 #recipiescard{
     margin-top: 17px;
      margin-left: 0px;
+     text-decoration: none;
 }
 
 

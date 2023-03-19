@@ -1,12 +1,20 @@
-let emailInput = document.getElementById('email');
-let emailRegex =  /^[A-Z0-9. _%+-]+@[A-Z0-9.-]+\.[ A-Z]{2,}$/;
 
-if (!emailRegex.test(emailInput.value)) {
-}
 
 document.querySelector("form").addEventListener("submit", function(event) {
     let nombre = document.getElementById("username").value;
-    let mail = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
     sessionStorage.setItem("username", nombre);
-    sessionStorage.setItem("email", mail);
+    sessionStorage.setItem("password", password);
   });
+
+  document.getElementById("recordarcontraseña").addEventListener("click", viewPassword);
+
+  function viewPassword() {
+    let password = sessionStorage.getItem("password");
+    if (password) {
+      alert("La contraseña almacenada es: " + password);
+    } else {
+      alert("No hay contraseña almacenada");
+    }
+  }

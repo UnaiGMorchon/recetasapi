@@ -16,7 +16,7 @@ function listFavorite(){
         let img = document.createElement("img");
             img.src = recipe.image;
 
-          let recipeItem = document.createElement("li");
+        let recipeItem = document.createElement("li");
           recipeItem.innerText = recipe.name;
 
           recipeItem.appendChild(img);
@@ -25,7 +25,6 @@ function listFavorite(){
         });
     listFav.appendChild(ul);
 }
-
 listFavorite();
 
 

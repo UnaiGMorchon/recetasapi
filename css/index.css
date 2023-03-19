@@ -22,11 +22,12 @@
 @media only screen and (max-width: 767px) {
     body {
         background-size: 150%;
-    background-position: 0px 0px, center;
+        background-position: 0px 0px, center;
        
     background-image: url('../img/pexels-anna-tukhfatullina-food-photographerstylist-2693447.jpg');
     }
 }
+
 
 
 
@@ -43,26 +44,47 @@
 }
  
 
+.icononotificacion{
+    margin-bottom: 372px;
+    margin-left: -240px;
+    scale: 6%;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+}
+
+
 footer{
     position: fixed;
     bottom: 0;
     z-index: 1;
-    background-color: #ffb700;
+    background-color: #ffffff;
     height: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+
 }
 
 .iconofavorito{
-    margin-bottom: -236px;
-    margin-left: -191px;
-    scale: 5%;
+    margin-bottom: -237px;
+    margin-left: -152px;
+    scale: 4%;
     position: fixed;
     bottom: 0;
     z-index: 1;
 }
 
+.iconohome{
+    margin-bottom: -234px;
+    margin-left: -225px;
+    scale: 6.5%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    border: none;
+}
 .iconosumar{
-    margin-bottom: -215px;
-    margin-left: -81px;
+    margin-bottom: -223px;
+    margin-left: -72px;
     scale: 5%;
     position: fixed;
     bottom: 0;
@@ -70,20 +92,29 @@ footer{
 }
 
 .iconopersona{
-    margin-left: 45px;
-    scale: 5%;
-    margin-top: -237px;
+    margin-left: 6px;
+    scale: 4%;
+    margin-top: -234px;
+}
+
+.iconorueda{
+    margin-left: 84px;
+    scale: 4%;
+    margin-top: -544px;
+    position: fixed;
+   
+    z-index: 3;
 }
 
 #circulo{
     position: fixed;
     bottom: 0;
     z-index: 2;
-    margin-top: 341px;
-    margin-left: 140px;
+    margin-bottom: 12px;
+    margin-left: 163px;
     background-color: #ffb700;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -126,10 +157,9 @@ h3{
 }
  
 #barramenu{
-    background-color: rgba(255, 183, 0, 0.5);
+    
     margin: 0px;
     height: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1;
 
 

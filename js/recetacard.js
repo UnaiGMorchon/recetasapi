@@ -2,7 +2,6 @@ import {getRecipes as favGetRecipes,addRecipes as favAddRecipes,deleteRecipe as 
 
 
 
-
 function crearIcono(simbolo,callback){
   let icono = document.createElement("i");
   icono.classList.add("fa", simbolo);
@@ -52,9 +51,9 @@ async function showRecipeOne(){
   async function setResults(recipe){
         let recipename = document.createElement("h3");
         // let iconoFavorite = crearIcono("fa-bookmark");
-        let iconoFavorite = crearIcono("fa-bookmark-o");
+        let iconoFavorite = crearIcono("fa-bookmark");
         let recipeimage = document.createElement("img");
-        let recipeyield = document.createElement("p");
+        //let recipeyield = document.createElement("p");
         let recipeingredients = document.createElement("ul");
         let recipecalories = document.createElement("p");
         let recipetotalTime = document.createElement("p");
@@ -63,28 +62,30 @@ async function showRecipeOne(){
         recipename.innerText = recipe.name;
         recipeimage.src = recipe.image;
         iconoFavorite.addEventListener("click",() => favAddRecipes(recipe));
+
         //recipeyield.innerText = "Yield: " + recipe.yield;
   
         recipe.ingredients.forEach(ingredient => {
               let li = document.createElement("li");
               li.innerText = ingredient.text;
+              li.classList.add("ingredient");
               recipeingredients.appendChild(li);
             });
 
-        recipecalories.innerText = "Calories: " + recipe.calories;
-        recipetotalTime.innerText = "Total Time: " + recipe.totalTime;
-        recipecuisineType.innerText = "Cuisine Type: " + recipe.cuisineType;
+        recipecalories.innerText = Math.floor(recipe.calories) + "Kcal";
+        recipetotalTime.innerText = recipe.totalTime + "min.";
+        recipecuisineType.innerText = recipe.cuisineType;
   
         recipeArticle.appendChild(recipename);
         recipeArticle.appendChild(iconoFavorite);
         recipeArticle.appendChild(recipeimage);
         //recipeArticle.appendChild(recipeyield);
+        recipeArticle.appendChild(recipeingredients);
         recipeArticle.appendChild(recipecalories);
         recipeArticle.appendChild(recipetotalTime);
         recipeArticle.appendChild(recipecuisineType);
-        recipeArticle.appendChild(recipeingredients);
       };
-  
+
       showRecipeOne();
       
 
