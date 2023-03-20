@@ -7,8 +7,8 @@ function createUrl() {
  /*  url.searchParams.append("dishType", "Biscuits and cookies");
   url.searchParams.append("dishType", "Desserts");
   url.searchParams.append("dishType", "Sweets"); */
-  url.searchParams.append("field", "label");
   url.searchParams.append("field", "image");
+  url.searchParams.append("field", "label");
   url.searchParams.append("field", "yield");
   url.searchParams.append("field", "ingredients");
   url.searchParams.append("field", "calories");
@@ -28,14 +28,14 @@ async function getRecipes() {
     .then(data => {
       return data.hits.map(hit => {
         return {
-          name: hit.recipe.label,
           image: hit.recipe.image,
-          yield: hit.recipe.yield,
-          ingredients: hit.recipe.ingredients,
-          calories: hit.recipe.calories,
-          totalTime: hit.recipe.totalTime,
+          name: hit.recipe.label,
+         // yield: hit.recipe.yield,
+          //ingredients: hit.recipe.ingredients,
+          //calories: hit.recipe.calories,
+         // totalTime: hit.recipe.totalTime,
           id: hit.recipe.uri.split("_")[1],
-          cuisineType: hit.recipe.cuisineType
+          //cuisineType: hit.recipe.cuisineType
           
         }
       });
@@ -54,50 +54,64 @@ async function setResults(){
     recipes.forEach(recipe => {
       let recipeArticle = document.createElement("article");
       recipeArticle.style.display ="none";
-      let name = document.createElement("h3");
+      /* // let iconoFavorite = crearIcono("fa-bookmark");
+     let iconoFavorite = crearIcono("fa-bookmark-o"); */
       let image = document.createElement("img");
       image.onload =function (){
         recipeArticle.style.display = "block";
       }
-      let yield = document.createElement("p");
-      let ingredients = document.createElement("ul");
-      let calories = document.createElement("p");
-      let totalTime = document.createElement("p");
-      let cuisineType = document.createElement("p");
+      let name = document.createElement("h3");
+      //let yield = document.createElement("p");
+      //let ingredients = document.createElement("ul");
+      //let calories = document.createElement("p");
+      //let totalTime = document.createElement("p");
+      //let cuisineType = document.createElement("p");
       let recipeUrl = document.createElement("a");
 
       name.innerText = recipe.name;
       image.src = recipe.image;
-      yield.innerText = "Yield: " + recipe.yield;
+      //yield.innerText = "Yield: " + recipe.yield;
 
-          recipe.ingredients.forEach(ingredient => {
+         /*  recipe.ingredients.forEach(ingredient => {
             let li = document.createElement("li");
             li.innerText = ingredient.text;
             ingredients.appendChild(li);
-          });
+          }); */
 
         
       recipeUrl.href = "recetacard.html?id=" + recipe.id;
 
       /* ingredients.innerText = "Ingredients: " + recipe.ingredients; */
-      calories.innerText = "Calories: " + recipe.calories;
-      totalTime.innerText = "Total Time: " + recipe.totalTime;
-      cuisineType.innerText = "Cuisine Type: " + recipe.cuisineType;
+      //calories.innerText = "Calories: " + recipe.calories;
+      //totalTime.innerText = "Total Time: " + recipe.totalTime;
+      //cuisineType.innerText = "Cuisine Type: " + recipe.cuisineType;
 
-      recipeArticle.appendChild(name);
+    
       recipeUrl.appendChild(image);
+     //  recipeArticle.appendChild(iconoFavorite);
+      recipeArticle.appendChild(name);
       recipeArticle.appendChild(recipeUrl);
-      recipeArticle.appendChild(yield);
-      recipeArticle.appendChild(ingredients);
-      recipeArticle.appendChild(calories);
-      recipeArticle.appendChild(totalTime);
-      recipeArticle.appendChild(cuisineType);
+      //recipeArticle.appendChild(yield);
+     // recipeArticle.appendChild(ingredients);
+      //recipeArticle.appendChild(calories);
+      //recipeArticle.appendChild(totalTime);
+      //recipeArticle.appendChild(cuisineType);
       recipeList.appendChild(recipeArticle);
       
     });
 
 }
 
-document.getElementById("Buscar").addEventListener("change", setResults); // elemento qu e hace la llamada
+
+document.getElementById("Buscar").addEventListener("input", function() {
+  var animation = document.getElementById('load');
+  setTimeout(function() {
+    animation.style.display = 'none';
+  }, 3000);
+  
+});
+
+
+document.getElementById("Buscar").addEventListener("change", setResults); // elemento que hace la llamada
 
 
